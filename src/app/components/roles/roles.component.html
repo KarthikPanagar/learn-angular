@@ -1,0 +1,53 @@
+<p>roles works!</p>
+<!-- Data Binding using Interpolation -->
+<div class="row">
+    <div class="col-3">
+        <h2> Full Name: {{firstName}} {{lastName}} </h2>
+    </div>
+    <div class="col-3">
+        <h3> Age: {{Age}} </h3>
+    </div>
+    <div class="col-3">
+        <h3> DOJ: {{joiningDate}} </h3>
+    </div>
+</div>
+
+<!-- Data Binding using Property Binding -->
+<div class="row">
+    <div class="col-4">
+        <input type="text" [value]="firstName" class="form-control" />
+    </div>
+    <!-- Two way Data Binding using ngModel -->
+    <div class="col-3">
+        <input type="text" [(ngModel)] = "lastName">
+    </div>
+    <div class="col-4">
+        <input [type]="inputType" />
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-3">
+            <h4> Select State: {{selectedState}} </h4>
+        </div>
+        <div class="col-3">
+            <select [(ngModel)]="selectedState" >
+                <option value="KA"> KA </option>
+                <option value="MH"> MH </option>
+                <option value="MP"> MP </option>
+            </select>
+        </div>
+    </div>
+</div>
+<!-- Event Binding -->
+<div class="row">
+    <div class="col-2">
+        <h4> Enter Course:  </h4>
+    </div>
+    <div class="col-2"> 
+        <button class="btn btn-success" (click)="showWelcome()"> Angular </button>    
+    </div>
+    <div class="col-2"> 
+        <button class="btn btn-success" (click)="ShowWelcomeMessage('Welcome to React')"> React </button>    
+    </div>
+</div> 
